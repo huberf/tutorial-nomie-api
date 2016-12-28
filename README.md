@@ -1,18 +1,31 @@
 # Nomie API Tutorial
 
-## NOTE: The API will be available only to a small group of people initially. To request access to the API please send a message to support @ happydata.org
+NOTE: The API will be available only to a small group of people initially. To request access to the API please send a message to support @ happydata.org
 
 The Nomie API is a simple way to send events, data, notes and more to your device running Nomie.
 
 ## Virtual Tap of a Tracker Button
 You can virtually tap your button by sending the ``track`` action to the Nomie API. Replace spaces in the tracker name with '%20'.
 
-### Single Tap Trackers
+## Overview
+The Nomie API accepts a push command. This command is a loosely URI based string that contains an action followed by specific parameters to support that action.
 
+## Track Action
+The track action allows you to virtually track any of your tracker by their label. If you request a tracked event from a tracker that you do not have installed, it will simply be ignored and erased. 
 ```
 https://api.nomie.io/v2/push/{apikey}/action=track/label=Peed
 https://api.nomie.io/v2/push/{apikey}/action=track/label=Ate%20Food
+https://api.nomie.io/v2/push/{apikey}/action=track/label=Ate%20Food/geo=33.36,-117.08
+https://api.nomie.io/v2/push/{apikey}/action=track/label=Temp/value=123
 ```
+### Available Track Parameters 
+
+- **label** -  Label of tracker you're targeting (URL encoded). e.g. ``label=Ate%20Dinner``
+- **charge** - Positivity of this event. e.g. ``/charge=-2``
+- **geo** - Geo location of the event. e.g. ``/geo=33.36,-117.08``
+- **time** - Time from the epoch of the event. **Note** time is automatically recorded, use this only for putting things in the future or the past. e.g. ``/time=1482888391633``
+- **value** - Value of the event (if supported by tracker). e.g. ``/value=34.54``
+
 
 ### Value based Trackers
 
@@ -20,10 +33,20 @@ https://api.nomie.io/v2/push/{apikey}/action=track/label=Ate%20Food
 https://api.nomie.io/v2/push/{apikey}/action=track/label=Temperature/value=123
 ```
 
-## Create a note
+## Notes
 
+Notes can be created in two ways, with a POST request or a GET request. Note that if you're requesting to create a note with a GET request
+the note must be encoded, otherwise it will fail.
+
+### Create a Note
+
+**GET**
 ```
 https://api.nomie.io/v2/push/{apikey}/action=create-note/note=its%20this%20easy!
+```
+**POST**
+```
+coming soon
 ```
 
 ## Example Ideas
