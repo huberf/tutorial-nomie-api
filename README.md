@@ -2,16 +2,10 @@
 
 NOTE: The API will be available only to a small group of people initially. To request access to the API please send a message to support @ happydata.org
 
-The Nomie API is a simple way to send events, data, notes and more to your device running Nomie.
-
-## Virtual Tap of a Tracker Button
-You can virtually tap your button by sending the ``track`` action to the Nomie API. Replace spaces in the tracker name with '%20'.
-
-## Overview
 The Nomie API accepts a push command. This command is a loosely URI based string that contains an action followed by specific parameters to support that action.
 
 ## Track Action
-The track action allows you to virtually track any of your tracker by their label. If you request a tracked event from a tracker that you do not have installed, it will simply be ignored and erased. 
+The track action allows you to virtually track any of your installed trackers. If you request a tracked event from a tracker that you do not have installed, it will simply be ignored and erased. 
 ```
 https://api.nomie.io/v2/push/{apikey}/action=track/label=Peed
 https://api.nomie.io/v2/push/{apikey}/action=track/label=Ate%20Food
