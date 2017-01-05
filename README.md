@@ -20,6 +20,7 @@ curl -k  -L -X POST -H 'Content-Type: application/json' -d '{
     label : "Peed"
 }' 'https://api.nomie.io/v2/push'
 ```
+## [See all Available Nomie API Commands here →](https://github.com/happydata/nomie-docs/blob/master/nomie-commands.md)
 
 ## Track Action
 The track action allows you to virtually track any of your installed trackers. If you request a tracked event from a tracker that you do not have installed, it will simply be ignored and erased. 
