@@ -1,6 +1,6 @@
 # Nomie API Tutorial
 
-NOTE: The API will be available only to a small group of people initially. To request access to the API please send a message to support @ happydata.org
+Nomie the app is, and will always be, free... The API, on the other hand, is not. The API is currently $9.99 a year. Sign up at https://connect.nomie.io 
 
 The Nomie API accepts a push command. This command is a loosely URI based string that contains an action followed by specific parameters to support that action.
 
