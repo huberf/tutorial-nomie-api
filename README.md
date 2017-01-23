@@ -71,6 +71,9 @@ Coming soon
 ### Create a Widget with Tasker (Android)
 Coming soon
 
+### Create an Amazon Alexa Skill
+Setup instructions at [github.com/huberf/nomiealexa](https://github.com/huberf/nomiealexa).
+
 ## How it Works:
 
 1. Your device registered an Anonyous ID, a Cloud App ID, and API Key and your Device ID (for push Notifications) `See below for how each are used`.
