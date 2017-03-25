@@ -66,7 +66,8 @@ Create a new Applet with the trigger as "DO Button" and action service as "Maker
 Use the [HTTP app for pebble](https://apps.getpebble.com/en_US/application/567af43af66b129c7200002b?query=http&section=watchapps), and add API URLs, named after their tracker. Add the app to pebble favourites, and quickly make ticks, straight from the watch! 
 
 ### Create a Widget with Workflow (iOS)
-Coming soon
+
+Create a new workflow and add a "Text" element. Fill this with any API URL, and then add the action "Get Contents of URL" below the "Text" element. For a simple "Tap" tracker, these two elements are the only requirements, but to do more calculations use variables inside the "Text" element.
 
 ### Create a Widget with Tasker (Android)
 Coming soon
